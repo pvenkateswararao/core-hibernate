@@ -10,6 +10,6 @@
         <property name="connection.url">jdbc:mysql://localhost:3306/mvcspringsecurity?useSSL=false&amp;serverTimezone=UTC</property>
         <property name="connection.username">hbstudent</property>
         <property name="connection.password">hbstudent</property>
-    	<property name="hibernate.hbm2ddl.auto">create</property>
+    	<property name="hibernate.hbm2ddl.auto">update</property>
     </session-factory>
 </hibernate-configuration>

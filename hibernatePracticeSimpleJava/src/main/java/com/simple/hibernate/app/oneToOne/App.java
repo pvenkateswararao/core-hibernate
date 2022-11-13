@@ -22,19 +22,26 @@ public class App
     	Session s = sf.openSession();
     	
     	Transaction trans = s.getTransaction();
-    	
+    	/*
     	AccessCard ac = new AccessCard();
     	ac.setCardNumber("AC123345678");
     	
     	Customer customer = new Customer();
     	customer.setName("Trinadh");
     	customer.setAccessCard(ac);
-    	
+    	*/
     	s.beginTransaction();
     	
-    	s.save(customer);
+    	//Customer customer = s.get(Customer.class,1);
+    	
+    	AccessCard accessCard = s.get(AccessCard.class, 1);
+    	
+    	System.out.println(accessCard);
+    	//System.out.println(customer.getAccessCard());
+    	System.out.println(accessCard.getCustomer());
     	
     	trans.commit();
+    	
     	
     	
     	

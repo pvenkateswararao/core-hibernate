@@ -49,5 +49,11 @@ public class Customer {
 	public void setAccessCard(AccessCard accessCard) {
 		this.accessCard = accessCard;
 	}
+
+	@Override
+	public String toString() {
+		return "Customer [customer_id=" + customer_id + ", name=" + name + "]";
+	}
+	
 	
 }

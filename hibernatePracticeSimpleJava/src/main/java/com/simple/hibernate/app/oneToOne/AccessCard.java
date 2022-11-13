@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -19,6 +20,10 @@ public class AccessCard {
 	@Column(name="card_number")
 	String cardNumber;
 
+
+	@OneToOne(mappedBy = "accessCard")
+	private Customer customer;
+	
 	public int getCardId() {
 		return cardId;
 	}
@@ -35,5 +40,18 @@ public class AccessCard {
 		this.cardNumber = cardNumber;
 	}
 	
+
+	@Override
+	public String toString() {
+		return "AccessCard [cardId=" + cardId + ", cardNumber=" + cardNumber + "]";
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
 	
 }
