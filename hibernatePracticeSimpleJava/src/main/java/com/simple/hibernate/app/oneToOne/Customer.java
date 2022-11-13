@@ -1,4 +1,4 @@
-package com.simple.hibernate.entity;
+package com.simple.hibernate.app.oneToOne;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -10,43 +10,36 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.simple.hibernate.app.oneToOne.AccessCard;
-
 @Entity
-@Table(name="employee")
-public class Employee {
+@Table(name="customers")
+public class Customer {
 
 	@Id
-	@Column(name="employee_id")
+	@Column(name = "customer_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	int customer_id;
 	
 	@Column(name="name")
-	private String name;
+	String name;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "cardId")
+	private AccessCard accessCard;
 	
-	@Column(name="salary")
-	private String salary;
-	
-	
-	
-	public int getId() {
-		return id;
+	public int getCustomer_id() {
+		return customer_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+
+	public void setCustomer_id(int customer_id) {
+		this.customer_id = customer_id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getSalary() {
-		return salary;
-	}
-	public void setSalary(String salary) {
-		this.salary = salary;
-	}
-	
 	
 }
