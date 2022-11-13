@@ -34,7 +34,7 @@ public class App
     	
     	//Customer customer = s.get(Customer.class,1);
     	
-    	AccessCard accessCard = s.get(AccessCard.class, 1);
+    	AccessCard accessCard =s.get(AccessCard.class, 1);
     	
     	System.out.println(accessCard);
     	//System.out.println(customer.getAccessCard());
