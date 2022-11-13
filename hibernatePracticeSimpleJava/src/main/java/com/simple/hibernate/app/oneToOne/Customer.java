@@ -41,5 +41,13 @@ public class Customer {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public AccessCard getAccessCard() {
+		return accessCard;
+	}
+
+	public void setAccessCard(AccessCard accessCard) {
+		this.accessCard = accessCard;
+	}
 	
 }
