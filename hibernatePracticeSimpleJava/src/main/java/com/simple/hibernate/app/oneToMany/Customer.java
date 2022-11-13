@@ -19,7 +19,7 @@ public class Customer {
 
 	@Id
 	@Column(name = "customer_id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy =GenerationType.IDENTITY)
 	int customer_id;
 
 	@Column(name = "name")
